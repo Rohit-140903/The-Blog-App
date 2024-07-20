@@ -1,0 +1,10 @@
+
+# Ignore .env file
+.env
+node_modules
+
+# Other files to ignore
+node_modules/
+.env
+dist/
+.DS_Store
