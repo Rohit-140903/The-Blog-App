@@ -33,7 +33,8 @@ function LogoutBtn() {
   const logoutHandler = () => {
     authService.logout().then(() => {
       dispatch(logout());
-      dispatch(resetPosts()); // ✅ Clear all posts
+    //   dispatch(resetPosts()); // ✅ Clear all posts
+      window.location.reload(); // Reload the page to reflect the logout state
     });
   };
 
