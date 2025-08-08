@@ -6,7 +6,8 @@ const store = configureStore({
     reducer : {
 
         auth : authSlice,
-        post: postSlice
+        post: postSlice // This is for managing posts, if you have a postSlice but not 
+        // using it in the current codebase, you can remove it. 
 
     }
 });

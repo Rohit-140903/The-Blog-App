@@ -22,19 +22,21 @@
 // export default LogoutBtn
 
 
-import { useDispatch } from "react-redux";
-import authService from "../appwrite/service";
-import { logout } from "../store/authSlice";
-import { resetPosts } from "../store/postSlice"; 
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, } from "react-redux";
+import authService from "../../appwrite/service";
+import { logout } from "../../store/authSlice";
+
 
 function LogoutBtn() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const logoutHandler = () => {
     authService.logout().then(() => {
       dispatch(logout());
-    //   dispatch(resetPosts()); // ✅ Clear all posts
-      window.location.reload(); // Reload the page to reflect the logout state
+      navigate("/");
     });
   };
 

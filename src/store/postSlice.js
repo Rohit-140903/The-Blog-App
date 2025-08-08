@@ -1,3 +1,5 @@
+// NOT USEFUL** This file is not used in the current codebase. just for knowledge
+
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
