@@ -36,6 +36,7 @@ function LogoutBtn() {
   const logoutHandler = () => {
     authService.logout().then(() => {
       dispatch(logout());
+      window.location.reload(); // Reload the page to reset the state
       navigate("/");
     });
   };
