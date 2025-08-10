@@ -46,12 +46,12 @@ export default function Protected({ children, authentication = true }) {
       return;
     }
 
-    if (authentication) {
+    if (authentication) { // Protected route, user must be authenticated so must be logged in
       if (authStatus !== true) {
         navigate("/login");
       }
     } else {
-      if (authStatus !== false) {
+      if (authStatus !== false) { // successful login
         navigate("/");
       }
     }
