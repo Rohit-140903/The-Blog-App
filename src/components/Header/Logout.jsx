@@ -32,12 +32,12 @@ import { logout } from "../../store/authSlice";
 function LogoutBtn() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  // auth layout handles the logout and navigation
+  // so we don't need to use navigate here
 
   const logoutHandler = () => {
     authService.logout().then(() => {
       dispatch(logout());
-      window.location.reload(); // Reload the page to reset the state
-      navigate("/");
     });
   };
 
